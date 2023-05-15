@@ -32,7 +32,7 @@ client.on('messageCreate', async (message) => {
 		};
 	
 		const headers = {
-			'Authorization': 'Bearer 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'
+			'Authorization': `Bearer ${process.env.HUGGINGFACE_KEY}`
 		};
 	
 		message.channel.sendTyping();
@@ -59,4 +59,4 @@ client.on('messageCreate', async (message) => {
 });
 	
 
-client.login('MTEwNjg1MzYyMDYwNTAwNTkxNg.GZZPCJ.qZYDQlVxsCxxRKcXTQAOWReE9EdmDor4dGKrDg');
+client.login(process.env.BOT_TOKEN);
